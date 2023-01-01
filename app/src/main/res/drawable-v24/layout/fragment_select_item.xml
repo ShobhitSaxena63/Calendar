@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background = "@color/screen_background"
+    tools:context=".ui.selectitem.SelectItem">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/outline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:backgroundTint="@color/fab_button"
+        android:contentDescription="To Add Task"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        app:fabSize="normal"
+        app:layout_anchorGravity="bottom|right|end"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:backgroundTint="@color/text_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.419"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/choose_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/habibi"
+        android:text="Choose items"
+        android:textColor="@color/text_color"
+        android:textSize="22sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar" />
+    <!--    app:layout_anchor="@id/monthly_trans_rv"-->
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/select_date_container"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="180dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Date"
+        app:boxStrokeColor="@color/outline"
+        app:hintTextColor="@color/outline"
+        app:layout_constraintBottom_toBottomOf="@+id/choose_item_label"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/choose_item_label"
+        app:layout_constraintTop_toBottomOf="@+id/choose_item_label">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/select_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:padding="8dp"
+            android:textAlignment="center"
+            android:focusable="false"
+            android:maxLength="35"
+            android:textSize="15sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <CalendarView-->
+<!--        android:id="@+id/calendar_view"-->
+<!--        style="@style/Widget.Material3.MaterialCalendar.Fullscreen"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/select_date_container"-->
+<!--        app:layout_constraintVertical_bias="0.0" />-->
+
+
+<!--    <com.skyhope.eventcalenderlibrary.CalenderEvent-->
+<!--        android:id="@+id/calender_event"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:calender_background="@color/screen_background"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/select_date_container"-->
+<!--        app:layout_constraintVertical_bias="0.110000014"-->
+<!--        app:selector_color="@color/outline" />-->
+
+<!--    <com.kizitonwose.calendar.view.CalendarView-->
+<!--        android:id="@+id/calendarView"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cv_scrollPaged="false"-->
+<!--        app:cv_orientation="vertical"-->
+<!--        app:cv_dayViewResource="@layout/calendar_day_layout"-->
+<!--        app:cv_monthHeaderResource="@layout/calendar_header"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/calender_event"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

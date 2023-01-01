@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineSpotShadowColor="#000000"
+    app:cardCornerRadius="20dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginEnd="5dp"
+    android:layout_marginBottom="5dp"
+    android:backgroundTint="@color/card_view"
+    app:cardElevation="5dp">
+ <LinearLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:orientation="vertical"
+     android:layout_margin="0dp">
+<!--     <TextView-->
+<!--         android:id="@+id/date_tv"-->
+<!--         android:layout_width="wrap_content"-->
+<!--         android:layout_height="wrap_content"-->
+<!--         tools:text="02 November, 2022"-->
+<!--         android:textSize="20sp"-->
+<!--         android:layout_marginTop="8dp"-->
+<!--         android:layout_marginStart="16dp"-->
+<!--         android:textColor="@color/black"-->
+<!--       />-->
+     <androidx.recyclerview.widget.RecyclerView
+         android:id="@+id/nested_rv"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         tools:listitem="@layout/month_rv_look">
+     </androidx.recyclerview.widget.RecyclerView>
+ </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

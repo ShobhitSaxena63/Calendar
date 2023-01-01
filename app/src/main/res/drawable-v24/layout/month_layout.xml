@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/colorCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:outlineSpotShadowColor="#000000"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="@color/month_card_red_color"
+    android:layout_marginTop="16dp"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="16dp"
+    app:cardElevation="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/dataCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="@color/card_view"
+            android:outlineSpotShadowColor="#000000"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:textColor="@color/text_color"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="JULY" />
+
+                <TextView
+                    android:id="@+id/item_one"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/year"
+                    tools:text="item 1" />
+
+                <TextView
+                    android:id="@+id/item_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/item_one"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/item_one"
+                    app:layout_constraintTop_toBottomOf="@+id/item_one"
+                    tools:text="item 2" />
+
+                <TextView
+                    android:id="@+id/item_three"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintEnd_toEndOf="@+id/item_two"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/item_two"
+                    app:layout_constraintTop_toBottomOf="@+id/item_two"
+                    tools:text="item 3" />
+
+                <TextView
+                    android:id="@+id/total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cash_color"
+                    app:layout_constraintEnd_toEndOf="@+id/item_one"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/item_one"
+                    app:layout_constraintTop_toBottomOf="@+id/item_three"
+                    android:text="Total Expense" />
+                <TextView
+                    android:id="@+id/total_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/cash_color"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/total"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="5100" />
+
+                <TextView
+                    android:id="@+id/budget_exceeded_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:textColor="@color/exceed_budget_color"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:text="BUDGET EXCEEDED"
+                    app:drawableStartCompat="@drawable/ic_baseline_error_24"
+                    app:drawableTint="@color/exceed_budget_color"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="BUDGET EXCEEDED" />
+
+                <TextView
+                    android:id="@+id/item_one_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/exceed_budget_color"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/item_one"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="-100" />
+
+                <TextView
+                    android:id="@+id/item_two_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/net_balance_color"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/item_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="+25000" />
+
+                <TextView
+                    android:id="@+id/item_three_transaction"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/net_balance_color"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/item_three"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="+100" />
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="#B8B8B8"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/total" />
+
+                <TextView
+                    android:id="@+id/view_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="12dp"
+                    android:text="VIEW ALL"
+                    android:textColor="@color/arrow_color"
+                    android:textSize="18sp"
+                    android:drawablePadding="5dp"
+                    app:drawableRightCompat="@drawable/ic_baseline_arrow_forward_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view2"
+                    tools:text="VIEW ALL" />
+
+                <TextView
+                    android:id="@+id/year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_color"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toStartOf="@+id/month"
+                    app:layout_constraintTop_toBottomOf="@+id/month"
+                    tools:text="2022" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>

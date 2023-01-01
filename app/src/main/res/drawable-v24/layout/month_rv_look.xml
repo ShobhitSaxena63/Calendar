@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+>
+        <TextView
+            android:id="@+id/transaction_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            tools:text="item 1"
+            android:textColor="@color/text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/myMenu"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/transaction_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/amount_spend"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/myMenu"
+            tools:text="-200" />
+
+        <TextView
+            android:id="@+id/transaction_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="8dp"
+            tools:text="30 May, 2022"
+            android:textColor="@color/card_items"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/transaction_name" />
+
+        <TextView
+            android:id="@+id/transaction_mode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:drawableStart="@drawable/ic_baseline_circle_24"
+            android:drawablePadding="5dp"
+            tools:text="Cash"
+            android:textColor="@color/card_items"
+            android:textSize="12sp"
+            app:layout_constraintBaseline_toBaselineOf="@+id/transaction_date"
+            app:layout_constraintStart_toEndOf="@+id/transaction_date" />
+<!--        android:textColor="#808080"-->
+        <ImageView
+            android:id="@+id/myMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/menu_dot" />
+
+        <!--    <View-->
+        <!--        android:id="@+id/view4"-->
+        <!--        android:layout_width="match_parent"-->
+        <!--        android:layout_height="2dp"-->
+        <!--        android:layout_marginTop="8dp"-->
+        <!--        android:background="#AFAFAF"-->
+        <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+        <!--        app:layout_constraintTop_toBottomOf="@+id/transaction_date" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>

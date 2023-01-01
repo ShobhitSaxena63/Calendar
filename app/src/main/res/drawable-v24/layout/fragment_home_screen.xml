@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_background"
+    tools:context=".ui.home.HomeScreen">
+
+
+<!--    <androidx.appcompat.widget.Toolbar-->
+<!--        android:id="@+id/toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="60dp"-->
+<!--        app:titleTextColor="@color/header_text"-->
+<!--        app:layout_scrollFlags="scroll|enterAlways"-->
+<!--        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--        android:background="@color/outline"-->
+<!--        />-->
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <androidx.appcompat.widget.Toolbar
+          android:id="@+id/toolbar"
+          android:layout_width="match_parent"
+          android:layout_height="60dp"
+          android:background="@color/outline"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_scrollFlags="scroll|enterAlways"
+          app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+<!--      <LinearLayout-->
+<!--          android:id="@+id/linear_layout"-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="match_parent"-->
+<!--          android:orientation="vertical">-->
+<!--          <androidx.appcompat.widget.Toolbar-->
+<!--              android:id="@+id/toolbar"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="60dp"-->
+<!--              app:titleTextColor="@color/header_text"-->
+<!--              app:layout_scrollFlags="scroll|enterAlways"-->
+<!--              app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--              android:background="@color/outline"-->
+<!--              />-->
+<!--          <com.google.android.material.tabs.TabLayout-->
+<!--              android:id="@+id/tab_layout"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              app:layout_constraintStart_toStartOf="parent"-->
+<!--              app:layout_constraintEnd_toEndOf="parent"-->
+<!--              android:background="@color/outline"-->
+<!--              app:tabTextColor="@color/white"-->
+<!--              app:tabIndicatorColor="@color/black"-->
+<!--              android:layout_gravity="top">-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="HOME"-->
+
+<!--                  />-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="CATEGORY 1"-->
+<!--                  />-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="CATEGORY 2"-->
+<!--                  />-->
+<!--          </com.google.android.material.tabs.TabLayout>-->
+<!--&lt;!&ndash;          <androidx.viewpager.widget.ViewPager&ndash;&gt;-->
+<!--&lt;!&ndash;              android:id="@+id/view_pager"&ndash;&gt;-->
+<!--&lt;!&ndash;              android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;              android:layout_height="match_parent"/>&ndash;&gt;-->
+
+<!--      </LinearLayout>-->
+<!--      <LinearLayout-->
+<!--          android:layout_width="match_parent"-->
+<!--          android:layout_height="match_parent"-->
+<!--          android:orientation="vertical">-->
+
+<!--          <com.google.android.material.tabs.TabLayout-->
+<!--              android:id="@+id/tab_layout"-->
+<!--              android:layout_width="match_parent"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              app:layout_constraintStart_toStartOf="parent"-->
+<!--              app:layout_constraintEnd_toEndOf="parent"-->
+<!--              android:background="@color/outline"-->
+<!--              app:tabTextColor="@color/white"-->
+<!--              app:tabIndicatorColor="@color/black"-->
+<!--              android:layout_gravity="top">-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="HOME"-->
+
+<!--                  />-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="CATEGORY 1"-->
+<!--                  />-->
+
+<!--              <com.google.android.material.tabs.TabItem-->
+<!--                  android:layout_width="match_parent"-->
+<!--                  android:layout_height="wrap_content"-->
+<!--                  android:text="CATEGORY 2"-->
+<!--                  />-->
+<!--          </com.google.android.material.tabs.TabLayout>-->
+          <!--        <androidx.viewpager.widget.ViewPager-->
+          <!--            android:id="@+id/view_pager"-->
+          <!--            android:layout_width="match_parent"-->
+          <!--            android:layout_height="match_parent"/>-->
+<!--      </LinearLayout>-->
+
+      <include
+          android:id="@+id/net_balance_card"
+          layout="@layout/net_balance_cardview"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="16dp"
+          android:layout_marginTop="12dp"
+          android:layout_marginEnd="16dp"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+      <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="8dp"
+                android:background="#979494"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/net_balance_card" />
+
+
+      <androidx.constraintlayout.widget.ConstraintLayout
+          android:id="@+id/upcoming_trans_constraintLayout"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="8dp"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/line"
+          app:layout_constraintBottom_toTopOf="@id/month_card_recyclerView"
+          >
+
+          <TextView
+              android:id="@+id/upcoming_transaction_label"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="16dp"
+              android:layout_marginEnd="8dp"
+              android:text="@string/upcoming_transactions"
+              android:textSize="16sp"
+              android:textStyle="bold"
+              app:layout_constraintBaseline_toBaselineOf="@+id/upcoming_drawable"
+              app:layout_constraintEnd_toStartOf="@id/upcoming_drawable"
+              app:layout_constraintHorizontal_bias="0.0"
+              app:layout_constraintStart_toStartOf="parent" />
+          <TextView
+              android:id="@+id/upcoming_drawable"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="2dp"
+              app:drawableStartCompat="@drawable/ic_baseline_minimize_24"
+              app:drawableTint="@color/text_color"
+              android:drawablePadding="16dp"
+              app:layout_constraintEnd_toEndOf="parent"
+              app:layout_constraintTop_toTopOf="parent"
+              />
+          <androidx.recyclerview.widget.RecyclerView
+              android:id="@+id/upcoming_trans_rv"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              tools:layout_height="160dp"
+              tools:listitem="@layout/upcoming_trans_rv_look"
+              app:layout_constraintTop_toBottomOf="@id/upcoming_transaction_label"
+              app:layout_constraintStart_toStartOf="parent"
+              app:layout_constraintEnd_toEndOf="parent"/>
+<!--          <Button-->
+<!--              android:id="@+id/remind_me"-->
+<!--              android:layout_width="wrap_content"-->
+<!--              android:layout_height="wrap_content"-->
+<!--              android:layout_marginTop="8dp"-->
+<!--              android:layout_marginStart="16dp"-->
+<!--              android:layout_marginBottom="8dp"-->
+<!--              android:text="REMIND ME"-->
+<!--              android:backgroundTint="@color/screen_background"-->
+<!--              android:textColor="@color/material_design_edit_text_outline"-->
+<!--              android:textSize="18sp"-->
+<!--              android:padding="8dp"-->
+<!--              android:textStyle="bold"-->
+<!--              android:drawableLeft="@drawable/ic_baseline_notifications_on"-->
+<!--              app:layout_constraintBottom_toBottomOf="parent"-->
+<!--              app:layout_constraintTop_toBottomOf="@id/upcoming_trans_rv"-->
+<!--              app:layout_constraintStart_toStartOf="parent" />-->
+
+          <TextView
+              android:id="@+id/upcoming_view_all"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="16dp"
+              android:padding="8dp"
+              android:text="VIEW ALL"
+              android:textColor="@color/material_design_edit_text_outline"
+              android:textSize="18sp"
+              android:textStyle="bold"
+              app:layout_constraintTop_toBottomOf="@id/upcoming_trans_rv"
+              app:drawableEndCompat="@drawable/ic_baseline_arrow_forward_24"
+              app:drawableTint="@color/material_design_edit_text_outline"
+              app:layout_constraintEnd_toEndOf="parent" />
+
+      </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/month_card_recyclerView"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintHorizontal_bias="0.0"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/upcoming_trans_constraintLayout"
+          tools:listitem="@layout/month_layout" />
+
+      <TextView
+          android:id="@+id/Notification"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="16dp"
+          android:layout_marginEnd="8dp"
+          android:layout_marginBottom="16dp"
+          android:text="@string/click_button_to_add_transactions"
+          android:textSize="20sp"
+          android:visibility="visible"
+          app:layout_constraintBottom_toBottomOf="@+id/month_card_recyclerView"
+          app:layout_constraintEnd_toEndOf="@+id/month_card_recyclerView"
+          app:layout_constraintStart_toStartOf="@+id/month_card_recyclerView"
+          app:layout_constraintTop_toBottomOf="@id/line"
+          app:layout_constraintVertical_bias="0.40" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/add_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/fab_button"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_anchor="@id/month_card_recyclerView"
+        app:layout_anchorGravity="bottom|right|end"
+        tools:ignore="SpeakableTextPresentCheck"
+        android:contentDescription="@string/add_transaction_msg" />
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical">-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            app:titleTextColor="@color/header_text"-->
+<!--            app:layout_scrollFlags="scroll|enterAlways"-->
+<!--            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+<!--            android:background="@color/outline"-->
+<!--            />-->
+<!--        <com.google.android.material.tabs.TabLayout-->
+<!--            android:id="@+id/tab_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            android:background="@color/outline"-->
+<!--            app:tabTextColor="@color/white"-->
+<!--            app:tabIndicatorColor="@color/black"-->
+<!--            android:layout_gravity="top">-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="HOME"-->
+
+<!--                />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="CATEGORY 1"-->
+<!--                />-->
+
+<!--            <com.google.android.material.tabs.TabItem-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="CATEGORY 2"-->
+<!--                />-->
+<!--        </com.google.android.material.tabs.TabLayout>-->
+<!--&lt;!&ndash;        <androidx.viewpager.widget.ViewPager&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/view_pager"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="match_parent"/>&ndash;&gt;-->
+<!--    </LinearLayout>-->
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
